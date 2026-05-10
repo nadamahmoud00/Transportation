@@ -46,7 +46,6 @@ The dataset contains transportation trip information including:
 
 ## 🔹 Data Engineering Using SSIS  
 
-Inside :contentReference[oaicite:3]{index=3} the following ETL processes were implemented:  
 
 ✔️ Extracting data from multiple source files  
 
@@ -66,7 +65,6 @@ Inside :contentReference[oaicite:3]{index=3} the following ETL processes were im
 
 ## 🔹 Data Transformation Using Power Query  
 
-Inside :contentReference[oaicite:4]{index=4} several preprocessing steps were applied:  
 
 ### 🛠️ Data Cleaning Processes  
 
