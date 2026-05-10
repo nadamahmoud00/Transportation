@@ -1,206 +1,212 @@
-# 🚆 Spain Transportation Analytics  
-(https://github.com/nadamahmoud00/Transportation/blob/main/power%20bi.PNG))
+# 🚆 Spain Transportation Analytics Dashboard  
+
+
+## 📌 Project Overview  
+
+Spain Transportation Analytics is an end-to-end Business Intelligence project designed to analyze transportation operations across Spain using modern Data Engineering and Analytics tools.  
+
+The project focuses on transforming raw transportation datasets collected from multiple Excel and CSV files into a clean, structured, and interactive analytical dashboard.  
 
 ---
 
-# 📌 Project Overview  
+# 🎯 Business Objectives  
 
-Spain Transportation Analytics is a Business Intelligence project that analyzes transportation data in Spain using an end-to-end Data Engineering workflow.  
-
-The project was developed using:  
-
-- :contentReference[oaicite:0]{index=0}  
-- :contentReference[oaicite:1]{index=1}  
-- :contentReference[oaicite:2]{index=2}  
-
-The goal of the project is to transform raw transportation datasets from multiple Excel and CSV files into a clean, structured, and interactive analytical dashboard.  
+- Build a centralized transportation dataset from multiple raw sources  
+- Perform data cleaning and preprocessing  
+- Handle missing values, duplicates, and inconsistent records  
+- Generate business KPIs and operational insights  
+- Create an interactive dashboard for transportation analytics  
 
 ---
 
-# 🎯 Project Objectives  
+# 📂 Dataset Description  
 
-✔️ Build a clean transportation dataset from multiple raw files  
+The dataset contains transportation trip information including:  
 
-✔️ Perform data preprocessing and transformation  
+| Category | Description |
+|---|---|
+| 🚆 Train Information | Train Type & Train Class |
+| 📍 Routes | Origin & Destination Stations |
+| 💰 Financial Data | Ticket Fare & Revenue |
+| ⏰ Time Analysis | Departure & Arrival Time |
+| 👥 Passenger Data | Passenger Records & Trips |
 
-✔️ Handle missing values, duplicates, and data quality issues  
-
-✔️ Create meaningful KPIs and business insights  
-
-✔️ Design an interactive dashboard for transportation analytics  
-
----
-
-# 📂 Dataset Information  
-
-The dataset contains transportation trip information such as:  
-
-- 🚉 Train Type  
-- 🎟️ Train Class  
-- 📍 Origin Station  
-- 📍 Destination Station  
-- 💰 Ticket Fare  
-- ⏰ Departure Time  
-- ⏰ Arrival Time  
-- 👥 Passenger Information  
-- 💵 Revenue Data  
-
-## 📁 Data Sources  
+### 📁 Data Sources  
 
 - Excel Files (.xlsx)  
 - CSV Files (.csv)  
 
 ---
 
-# ⚙️ ETL & Data Cleaning Process  
+# ⚙️ ETL & Data Preparation  
 
-## 🔹 Using SSIS  
+## 🔹 Data Engineering Using SSIS  
 
-Inside :contentReference[oaicite:3]{index=3} we performed:  
+Inside :contentReference[oaicite:3]{index=3} the following ETL processes were implemented:  
 
-- Data Extraction from multiple source files  
-- Data Flow Tasks  
-- Error Handling  
-- Ignoring invalid or null records  
-- Splitting and transforming columns  
-- Merging and integrating datasets  
-- Loading the cleaned data into the final model  
+✔️ Extracting data from multiple source files  
+
+✔️ Building Data Flow Tasks  
+
+✔️ Error handling and invalid record management  
+
+✔️ Ignoring null and corrupted records  
+
+✔️ Splitting and transforming columns  
+
+✔️ Merging and integrating datasets  
+
+✔️ Loading cleaned data into the analytical model  
 
 ---
 
-## 🔹 Using Power Query  
+## 🔹 Data Transformation Using Power Query  
 
-Inside :contentReference[oaicite:4]{index=4} we performed:  
+Inside :contentReference[oaicite:4]{index=4} several preprocessing steps were applied:  
 
-### 🛠️ Data Transformations  
+### 🛠️ Data Cleaning Processes  
 
-- Removed duplicates  
+- Removed duplicate records  
 - Fixed inconsistent values  
-- Handled missing data  
-- Changed data types  
+- Handled missing values  
+- Standardized data types  
 - Cleaned fare values  
 - Standardized train categories  
 
 ---
 
-## ➕ Created Custom Column  
+## ➕ Custom Feature Engineering  
 
-A new route column was created using:  
+A new calculated column was created to combine route information:  
 
-
+```text
 Origin + " - " + Destination
-Madrid - Barcelon
+```
 
+### Example  
 
-📊 Dashboard KPIs
-
-🔹 Main KPIs
-
-KPI	Value
-
-🚆 Total Trips	2.57M
-👥 Total Passengers	2.57M
-💰 Total Revenue	$143.83M
-📈 Dashboard Insights
-💰 Revenue Analysis
-
-AVE train type generated the highest revenue
-Most revenue occurs during peak daytime hours
-
-🚉 Route Analysis
-🔥 Top Routes
-Madrid → Barcelona
-Madrid → Sevilla
-Barcelona → Madrid
-🎟️ Fare Distribution
-
-Most passengers selected:
-
-Promo Fare
-Flexible Fare
-🚆 Train Class Analysis
-
-The majority of passengers preferred:
-
-Turista Class
-
-🖥️ Dashboard Features
-
-
-# The dashboard includes:
-
-✅ Interactive Filters (Slicers)
-
-✅ Revenue Analysis
-
-✅ Passenger Trends
-
-✅ Route Distribution
-
-✅ Train Class Distribution
-
-✅ Fare Analysis
-
-✅ Time-Based Analysis
+```text
+Madrid - Barcelona
+```
 
 ---
 
+# 📊 Dashboard KPIs  
 
-#🛠️ Tools & Technologies
-
-Tool	Purpose
-SSIS	ETL Process
-Power Query	Data Cleaning & Transformation
-Power BI	Dashboard & Visualization
-Excel / CSV	Raw Data Sources
-
-
----
-🚀 Key Skills Demonstrated
-
-ETL Pipelines
-Data Cleaning
-Data Transformation
-Data Modeling
-Dashboard Design
-Business Intelligence
-Data Visualization
-KPI Analysis
-
-
----
-📌 Dashboard Preview
-
-The dashboard provides a complete transportation analytics experience through:
-
-KPI Cards
-Revenue Charts
-Passenger Trends
-Route Distribution
-Fare Analysis
-Train Class Insights
-Interactive Slicers
+| KPI | Value |
+|---|---|
+| 🚆 Total Trips | 2.57M |
+| 👥 Total Passengers | 2.57M |
+| 💰 Total Revenue | $143.83M |
 
 ---
 
-Conclusion
+# 📈 Analytical Insights  
 
-This project demonstrates a complete Business Intelligence workflow starting from raw transportation datasets to an interactive analytical dashboard.
+## 💰 Revenue Insights  
 
-The analysis helps identify:
+- AVE train type generated the highest revenue  
+- Revenue peaks during daytime operational hours  
 
-Passenger behavior
-High-demand routes
-Revenue trends
-Train performance across Spain
+---
 
-The project highlights practical skills in Data Engineering, ETL processes, Data Transformation, and Business Intelligence visualization.
+## 🚉 Route Performance  
 
+### Top Performing Routes  
 
+1. Madrid → Barcelona  
+2. Madrid → Sevilla  
+3. Barcelona → Madrid  
 
+---
 
+## 🎟️ Fare Distribution Analysis  
 
+The majority of passengers selected:  
 
+- Promo Fare  
+- Flexible Fare  
+
+---
+
+## 🚆 Passenger Class Analysis  
+
+Most passengers preferred:  
+
+- Turista Class  
+
+---
+
+# 🖥️ Dashboard Features  
+
+The dashboard includes:  
+
+✅ Interactive Slicers & Filters  
+
+✅ Passenger Trend Analysis  
+
+✅ Revenue Analysis  
+
+✅ Route Distribution Visualization  
+
+✅ Train Class Distribution  
+
+✅ Fare Distribution Analysis  
+
+✅ Time-Based Operational Insights  
+
+---
+
+# 🛠️ Tools & Technologies  
+
+| Tool | Purpose |
+|---|---|
+| SSIS | ETL & Data Integration |
+| Power Query | Data Cleaning & Transformation |
+| Power BI | Dashboard Development & Visualization |
+| Excel / CSV | Raw Data Sources |
+
+---
+
+# 🚀 Skills Demonstrated  
+
+- ETL Pipeline Development  
+- Data Cleaning & Transformation  
+- Data Modeling  
+- Dashboard Design  
+- Business Intelligence Analytics  
+- KPI Reporting  
+- Data Visualization  
+- Insight Generation  
+
+---
+
+# 📌 Dashboard Preview  
+
+The dashboard provides a complete transportation analytics experience through:  
+
+- KPI Cards  
+- Revenue Visualizations  
+- Passenger Trend Monitoring  
+- Route Analysis  
+- Fare Distribution Charts  
+- Train Class Insights  
+- Interactive Dashboard Filters  
+
+---
+
+# ✅ Conclusion  
+
+This project demonstrates a complete Business Intelligence workflow starting from raw transportation datasets to a fully interactive analytical dashboard.  
+
+The solution enables stakeholders to:  
+
+- Understand passenger behavior  
+- Identify high-demand routes  
+- Analyze revenue performance  
+- Monitor transportation operations across Spain  
+
+The project highlights practical experience in Data Engineering, ETL development, data transformation, and Business Intelligence visualization.
 
 
 
