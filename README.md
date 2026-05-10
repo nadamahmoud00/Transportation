@@ -1,6 +1,10 @@
 # 🚆 Spain Transportation Analytics Dashboard  
 
+<p align="center">
+  <img src="https://github.com/nadamahmoud00/Transportation/blob/main/power%20bi.PNG" width="100%">
+</p>
 
+ 
 ## 📌 Project Overview  
 
 Spain Transportation Analytics is an end-to-end Business Intelligence project designed to analyze transportation operations across Spain using modern Data Engineering and Analytics tools.  
