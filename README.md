@@ -1,6 +1,6 @@
 # 🚆 Spain Transportation Analytics  
 
-![Dashboard Preview](ضعي_لينك_الصورة_هنا)
+![Dashboard Preview] (https://github.com/nadamahmoud00/Transportation/blob/main/power%20bi.PNG))
 
 ---
 
@@ -88,5 +88,107 @@ Inside :contentReference[oaicite:4]{index=4} we performed:
 
 A new route column was created using:  
 
-```text
+
 Origin + " - " + Destination
+Madrid - Barcelon
+
+---
+📊 Dashboard KPIs
+🔹 Main KPIs
+KPI	Value
+🚆 Total Trips	2.57M
+👥 Total Passengers	2.57M
+💰 Total Revenue	$143.83M
+📈 Dashboard Insights
+💰 Revenue Analysis
+AVE train type generated the highest revenue
+Most revenue occurs during peak daytime hours
+🚉 Route Analysis
+🔥 Top Routes
+Madrid → Barcelona
+Madrid → Sevilla
+Barcelona → Madrid
+🎟️ Fare Distribution
+
+Most passengers selected:
+
+Promo Fare
+Flexible Fare
+🚆 Train Class Analysis
+
+The majority of passengers preferred:
+
+Turista Class
+🖥️ Dashboard Features
+
+
+# The dashboard includes:
+
+✅ Interactive Filters (Slicers)
+
+✅ Revenue Analysis
+
+✅ Passenger Trends
+
+✅ Route Distribution
+
+✅ Train Class Distribution
+
+✅ Fare Analysis
+
+✅ Time-Based Analysis
+---
+
+
+#🛠️ Tools & Technologies
+Tool	Purpose
+SSIS	ETL Process
+Power Query	Data Cleaning & Transformation
+Power BI	Dashboard & Visualization
+Excel / CSV	Raw Data Sources
+---
+🚀 Key Skills Demonstrated
+ETL Pipelines
+Data Cleaning
+Data Transformation
+Data Modeling
+Dashboard Design
+Business Intelligence
+Data Visualization
+KPI Analysis
+---
+📌 Dashboard Preview
+
+The dashboard provides a complete transportation analytics experience through:
+
+KPI Cards
+Revenue Charts
+Passenger Trends
+Route Distribution
+Fare Analysis
+Train Class Insights
+Interactive Slicers
+---
+
+✅ Conclusion
+
+This project demonstrates a complete Business Intelligence workflow starting from raw transportation datasets to an interactive analytical dashboard.
+
+The analysis helps identify:
+
+Passenger behavior
+High-demand routes
+Revenue trends
+Train performance across Spain
+
+The project highlights practical skills in Data Engineering, ETL processes, Data Transformation, and Business Intelligence visualization.
+
+
+
+
+
+
+
+
+
+
