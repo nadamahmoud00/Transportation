@@ -1,6 +1,5 @@
 # 🚆 Spain Transportation Analytics  
-
-![Dashboard Preview] (https://github.com/nadamahmoud00/Transportation/blob/main/power%20bi.PNG))
+(https://github.com/nadamahmoud00/Transportation/blob/main/power%20bi.PNG))
 
 ---
 
@@ -92,17 +91,22 @@ A new route column was created using:
 Origin + " - " + Destination
 Madrid - Barcelon
 
----
+
 📊 Dashboard KPIs
+
 🔹 Main KPIs
+
 KPI	Value
+
 🚆 Total Trips	2.57M
 👥 Total Passengers	2.57M
 💰 Total Revenue	$143.83M
 📈 Dashboard Insights
 💰 Revenue Analysis
+
 AVE train type generated the highest revenue
 Most revenue occurs during peak daytime hours
+
 🚉 Route Analysis
 🔥 Top Routes
 Madrid → Barcelona
@@ -119,6 +123,7 @@ Flexible Fare
 The majority of passengers preferred:
 
 Turista Class
+
 🖥️ Dashboard Features
 
 
@@ -137,17 +142,22 @@ Turista Class
 ✅ Fare Analysis
 
 ✅ Time-Based Analysis
+
 ---
 
 
 #🛠️ Tools & Technologies
+
 Tool	Purpose
 SSIS	ETL Process
 Power Query	Data Cleaning & Transformation
 Power BI	Dashboard & Visualization
 Excel / CSV	Raw Data Sources
+
+
 ---
 🚀 Key Skills Demonstrated
+
 ETL Pipelines
 Data Cleaning
 Data Transformation
@@ -156,6 +166,8 @@ Dashboard Design
 Business Intelligence
 Data Visualization
 KPI Analysis
+
+
 ---
 📌 Dashboard Preview
 
@@ -168,9 +180,10 @@ Route Distribution
 Fare Analysis
 Train Class Insights
 Interactive Slicers
+
 ---
 
-✅ Conclusion
+Conclusion
 
 This project demonstrates a complete Business Intelligence workflow starting from raw transportation datasets to an interactive analytical dashboard.
 
