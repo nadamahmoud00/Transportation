@@ -1,0 +1,1768 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/24/2026 5:18:34 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MARWAN"
+  DTS:CreatorName="MARWAN\Dell"
+  DTS:DTSID="{5095B312-CD0B-4D76-87B9-06C2B0B43813}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{9D7A8DE2-254B-4157-9C5C-993DF5F933D3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{686A3282-0611-4777-AA86-C8B4D7E0AC93}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\FCAIH\Level 4 Term 2\DSS\Lab\Project data\public_transportation_data.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B6B5DA0F-18FA-442A-8171-FF2ADA14C22B}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\FCAIH\Level 4 Term 2\DSS\Lab\Project data\public_transportation_data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unnamed  0"
+              DTS:DTSID="{07ED9215-A9C2-4CAC-9F05-F1D29DED85F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="insert_date"
+              DTS:DTSID="{D143E88E-F76A-4935-9777-EBE10CDF522E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="origin"
+              DTS:DTSID="{776DA21B-B8B9-4998-B459-892A91A044BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="destination"
+              DTS:DTSID="{97FF7EAF-AA42-48EC-AE27-DF74757E0B0D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="start_date"
+              DTS:DTSID="{2D79FAA5-7D0D-4567-8E9F-0156049684CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="end_date"
+              DTS:DTSID="{F52047A9-3013-421A-9592-1BE573EA8F1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="train_type"
+              DTS:DTSID="{3993CDA8-2AFA-4F45-B24B-947C21503A01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="price"
+              DTS:DTSID="{BBA1647E-EBCC-4B57-AE83-853C588B99CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="train_class"
+              DTS:DTSID="{E0397901-366C-4225-87BE-E173538547FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fare"
+              DTS:DTSID="{6C81B037-BEEF-41EB-966B-9F1BF84A6421}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="insert_time"
+              DTS:DTSID="{61FC662E-92B4-4E3D-8FC9-BD5B4AFBE6C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="start_time"
+              DTS:DTSID="{8DF989E3-8790-4D5E-B472-6C087C4476C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="end_time"
+              DTS:DTSID="{7606E5F5-826B-4427-9E8F-5C505628005C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MARWAN\MSSQLSERVER01.Med10]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{65145A19-F19B-40D7-82C5-933CAB78BA68}"
+      DTS:ObjectName="MARWAN\MSSQLSERVER01.Med10">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MARWAN\MSSQLSERVER01;Initial Catalog=Med10;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{65145A19-F19B-40D7-82C5-933CAB78BA68}MARWAN\MSSQLSERVER01.Med10;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MARWAN\MSSQLSERVER01.Transportation]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0872BA56-B314-45A4-8AAB-EFD528E77D79}"
+      DTS:ObjectName="MARWAN\MSSQLSERVER01.Transportation">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MARWAN\MSSQLSERVER01;Initial Catalog=Transportation;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{0872BA56-B314-45A4-8AAB-EFD528E77D79}MARWAN\MSSQLSERVER01.Transportation;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MARWAN\MSSQLSERVER01.Transportation 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{16F2DFC7-2884-4100-A057-F277390B977A}"
+      DTS:ObjectName="MARWAN\MSSQLSERVER01.Transportation 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MARWAN\MSSQLSERVER01;Initial Catalog=Transportation;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{16F2DFC7-2884-4100-A057-F277390B977A}MARWAN\MSSQLSERVER01.Transportation;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{32963B08-AC68-421A-936C-D6E3C78882F1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\CSV File"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="CSV File"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\CSV File.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[insert_date]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_date]"
+                      name="insert_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[origin]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[origin]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[origin]"
+                      name="origin"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[destination]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[destination]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[destination]"
+                      name="destination"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[start_date]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_date]"
+                      name="start_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[end_date]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_date]"
+                      name="end_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[train_type]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_type]"
+                      name="train_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[price]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[price]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[price]"
+                      name="price"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_class]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[train_class]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_class]"
+                      name="train_class"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[fare]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[fare]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[fare]"
+                      name="fare"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_time]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[insert_time]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_time]"
+                      name="insert_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_time]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[start_time]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_time]"
+                      name="start_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_time]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[end_time]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_time]"
+                      name="end_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[Unnamed  0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Unnamed  0" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[insert_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="insert_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[origin]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="origin" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[destination]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="destination" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[start_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="start_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[end_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[train_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="train_type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[price]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="price" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[train_class]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="train_class" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[fare]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fare" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[insert_time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="insert_time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[start_time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="start_time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].ExternalColumns[end_time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="end_time" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[origin]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="origin"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[origin]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[destination]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="destination"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[destination]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[train_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="train_type"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[price]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="price"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[price]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[train_class]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="train_class"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_class]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[insert_time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="insert_time"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[start_time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="start_time"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[end_time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="end_time"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[fare]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fare"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[fare]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of origin]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of origin]"
+                      name="Copy of origin"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[origin]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of destination]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of destination]"
+                      name="Copy of destination"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[destination]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of train_type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of train_type]"
+                      name="Copy of train_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_type]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of price]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of price]"
+                      name="Copy of price"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[price]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of train_class]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of train_class]"
+                      name="Copy of train_class"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_class]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of insert_time]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of insert_time]"
+                      name="Copy of insert_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_time]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of start_time]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of start_time]"
+                      name="Copy of start_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_time]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of end_time]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of end_time]"
+                      name="Copy of end_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_time]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of fare]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of fare]"
+                      name="Copy of fare"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[fare]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[start_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="start_date"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[end_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="end_date"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[insert_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="insert_date"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[T.start_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[T.start_date]"
+                      name="T.start_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE](#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_date]},"/","-")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(start_date,"/","-")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[T.end_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[T.end_date]"
+                      name="T.end_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE](#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_date]},"/","-")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(end_date,"/","-")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[T.insert_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[T.insert_date]"
+                      name="T.insert_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE](#{Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_date]},"/","-")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(insert_date,"/","-")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\transportationData"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="transportationData"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[transportationData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\transportationData.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MARWAN\MSSQLSERVER01.Transportation]"
+                  connectionManagerRefId="Package.ConnectionManagers[MARWAN\MSSQLSERVER01.Transportation]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[T.insert_date]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="T.insert_date"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[insert_date]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[T.insert_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[T.start_date]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="T.start_date"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[start_date]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[T.start_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[T.end_date]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="T.end_date"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[T.end_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[Copy of origin]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of origin"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[origin]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of origin]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[Copy of destination]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of destination"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[destination]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of destination]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[Copy of train_type]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of train_type"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[train_type]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of train_type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[Copy of price]"
+                      cachedDataType="r4"
+                      cachedName="Copy of price"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[price]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of price]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[Copy of train_class]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of train_class"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[train_class]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of train_class]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[Copy of insert_time]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of insert_time"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[insert_time]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of insert_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[Copy of start_time]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of start_time"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[start_time]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of start_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[Copy of end_time]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of end_time"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[end_time]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of end_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].Columns[Copy of fare]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of fare"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[fare]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of fare]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[insert_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="insert_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[origin]"
+                      dataType="wstr"
+                      length="255"
+                      name="origin" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[destination]"
+                      dataType="wstr"
+                      length="255"
+                      name="destination" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[start_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="start_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[train_type]"
+                      dataType="wstr"
+                      length="255"
+                      name="train_type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[price]"
+                      dataType="r8"
+                      name="price" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[train_class]"
+                      dataType="wstr"
+                      length="255"
+                      name="train_class" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[fare]"
+                      dataType="wstr"
+                      length="255"
+                      name="fare" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[insert_time]"
+                      dataType="wstr"
+                      length="255"
+                      name="insert_time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[start_time]"
+                      dataType="wstr"
+                      length="255"
+                      name="start_time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input].ExternalColumns[end_time]"
+                      dataType="wstr"
+                      length="255"
+                      name="end_time" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\transportationData.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\transportationData.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\transportationData.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\transportationData.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\transportationData.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\transportationErrorData"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="transportationErrorData"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[transportationErrorData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\transportationErrorData.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MARWAN\MSSQLSERVER01.Transportation 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[MARWAN\MSSQLSERVER01.Transportation 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[insert_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="insert_date"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[insert_date]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[origin]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="origin"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[origin]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[origin]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[destination]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="destination"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[destination]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[destination]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[start_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="start_date"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[start_date]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[end_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="end_date"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[train_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="train_type"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[train_type]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[price]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="price"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[price]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[price]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[train_class]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="train_class"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[train_class]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[train_class]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[fare]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fare"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[fare]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[fare]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[insert_time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="insert_time"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[insert_time]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[insert_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[start_time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="start_time"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[start_time]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[start_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].Columns[end_time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="end_time"
+                      externalMetadataColumnId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[end_time]"
+                      lineageId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output].Columns[end_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[insert_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="insert_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[origin]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="origin" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[destination]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="destination" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[start_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="start_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[train_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="train_type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[price]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="price" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[train_class]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="train_class" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[fare]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="fare" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[insert_time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="insert_time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[start_time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="start_time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input].ExternalColumns[end_time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="end_time" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\transportationErrorData.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\transportationErrorData.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\transportationErrorData.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\transportationErrorData.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Error Output]"
+              endId="Package\Data Flow Task\transportationErrorData.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Error Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\transportationData.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\CSV File.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="288.333317579495,191.533332001435" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="283.333317852683,251.333331585593" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="280.833317989277,163.799998860955" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\Data Flow Task\CSV File"
+          TopLeft="296.666650457515,64.1333328873582" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Data Flow Task\transportationData"
+          TopLeft="271.666651823455,367.466664111349" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="357.549984223396,105.733332887358">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.0666659735968"
+              Start="0,0"
+              End="0,50.5666659735968">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5666659735968" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="356.699984838069,292.933331585593">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.533332525756"
+              Start="0,0"
+              End="0,67.033332525756">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.033332525756" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,25.516666262878,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="359.28331792098,205.399998860955">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.933332724638"
+              Start="0,0"
+              End="0,38.433332724638">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.433332724638" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\Data Flow Task\transportationErrorData"
+          TopLeft="553.333303100534,167.466666208638" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
+          TopLeft="436.833317989277,186.433332534796">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116.499985111257,0"
+              Start="0,0"
+              End="108.999985111257,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="108.999985111257,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-11.5863941631214,5,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\transportationData">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
