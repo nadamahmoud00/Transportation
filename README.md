@@ -1,4 +1,7 @@
 🚆 Spain Transportation Analytics
+
+
+
 📌 Project Overview
 
 Spain Transportation Analytics is a Business Intelligence project that analyzes transportation data in Spain using an end-to-end Data Engineering workflow.
@@ -11,11 +14,13 @@ Power Query
 The goal of the project is to transform raw transportation datasets from multiple Excel and CSV files into a clean, structured, and interactive analytical dashboard.
 
 🎯 Project Objectives
+
 Build a clean transportation dataset from multiple raw files
 Perform data preprocessing and transformation
 Handle missing values, duplicates, and data quality issues
 Create meaningful KPIs and business insights
 Design an interactive dashboard for transportation analytics
+
 📂 Dataset Information
 
 The dataset contains transportation trip information such as:
@@ -29,6 +34,8 @@ Departure Time
 Arrival Time
 Passenger Information
 Revenue Data
+
+
 📁 Data Sources
 Excel Files (.xlsx)
 CSV Files (.csv)
@@ -62,7 +69,10 @@ A new route column was created using:
 Origin + " - " + Destination
 Example:
 Madrid - Barcelona
+
+
 📊 Dashboard KPIs
+
 🔹 Main KPIs
 Total Trips → 2.57M
 Total Passengers → 2.57M
@@ -98,12 +108,17 @@ Route Distribution
 Train Class Distribution
 Fare Analysis
 Time-Based Analysis
+
+
 🛠️ Tools & Technologies
 Tool	Purpose
 SSIS	ETL Process
 Power Query	Data Cleaning & Transformation
 Power BI	Dashboard & Visualization
 Excel / CSV	Raw Data Sources
+
+
+
 🚀 Key Skills Demonstrated
 ETL Pipelines
 Data Cleaning
@@ -113,6 +128,8 @@ Dashboard Design
 Business Intelligence
 Data Visualization
 KPI Analysis
+
+
 📌 Dashboard Preview
 
 The dashboard provides a complete transportation analytics experience through:
@@ -124,7 +141,9 @@ Route Distribution
 Fare Analysis
 Train Class Insights
 Interactive Slicers
-✅ Conclusion
+
+
+ Conclusion
 
 This project demonstrates a complete Business Intelligence workflow starting from raw transportation datasets to an interactive analytical dashboard.
 
